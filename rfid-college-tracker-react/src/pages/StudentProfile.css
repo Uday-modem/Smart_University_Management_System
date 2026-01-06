@@ -1,0 +1,230 @@
+/* ============================================
+   STUDENT PROFILE PAGE - MAIN CONTAINER
+   ============================================ */
+.student-profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   PROFILE HEADER
+   ============================================ */
+.profile-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-5px);
+}
+
+.profile-header h1 {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ============================================
+   PROFILE CARD
+   ============================================ */
+.profile-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   PROFILE AVATAR
+   ============================================ */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 auto 40px;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================================
+   PROFILE DETAILS
+   ============================================ */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row label {
+  font-weight: 600;
+  color: #555;
+  font-size: 15px;
+}
+
+.detail-row span {
+  color: #333;
+  font-size: 15px;
+  text-align: right;
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+.profile-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   ERROR STATE
+   ============================================ */
+.profile-error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.profile-error h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.profile-error p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.profile-error button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.profile-error button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .profile-header h1 {
+    font-size: 26px;
+  }
+
+  .profile-card {
+    padding: 35px 25px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .detail-row span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-profile {
+    padding: 15px 10px;
+  }
+
+  .profile-header h1 {
+    font-size: 22px;
+  }
+
+  .profile-card {
+    padding: 25px 15px;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+}

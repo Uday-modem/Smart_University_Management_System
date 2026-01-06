@@ -1,0 +1,221 @@
+/* LateAlertPopup.css - Dedicated stylesheet for staff late alert popup component */
+
+.late-alert-popup {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 380px;
+  max-width: calc(100vw - 40px);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+              0 0 0 1px rgba(220, 53, 69, 0.1);
+  z-index: 2000;
+  animation: slideInRight 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header Section */
+.late-alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.late-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.late-alert-icon {
+  font-size: 24px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.late-alert-title-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.late-alert-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 300;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.late-alert-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.late-alert-close-btn:active {
+  transform: rotate(90deg) scale(0.9);
+}
+
+/* Content Section */
+.late-alert-content {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.late-alert-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.late-alert-field:last-child {
+  border-bottom: none;
+}
+
+.late-alert-field.late-alert-highlight {
+  background: #fff3cd;
+  margin: 8px -20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #ffc107;
+  border-bottom: 1px solid #ffc107;
+}
+
+.late-alert-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+  flex: 1;
+}
+
+.late-alert-value {
+  font-size: 14px;
+  color: #212529;
+  font-weight: 500;
+  text-align: right;
+  flex: 1;
+  margin-left: 12px;
+}
+
+.late-alert-value.late-alert-late {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.late-alert-value.late-alert-late-bold {
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Footer Section */
+.late-alert-footer {
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+}
+
+.late-alert-note {
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+  display: block;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .late-alert-popup {
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-width: none;
+  }
+
+  .late-alert-content {
+    padding: 16px;
+  }
+
+  .late-alert-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .late-alert-value {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .late-alert-popup {
+    background: #2d3748;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .late-alert-content {
+    background: #2d3748;
+  }
+
+  .late-alert-label {
+    color: #e2e8f0;
+  }
+
+  .late-alert-value {
+    color: #f7fafc;
+  }
+
+  .late-alert-field {
+    border-bottom-color: #4a5568;
+  }
+
+  .late-alert-footer {
+    background: #1a202c;
+    border-top-color: #4a5568;
+  }
+
+  .late-alert-note {
+    color: #a0aec0;
+  }
+}
+

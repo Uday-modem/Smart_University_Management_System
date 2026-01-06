@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Full Stack & IoT Developer</title>
+    <meta name="description" content="Interactive portfolio showcasing full-stack web development and IoT projects">
+    <meta property="og:title" content="Full Stack Developer & IoT Enthusiast">
+    <meta property="og:description" content="Interactive portfolio with animations, achievements, and project gallery">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===================================
+         1. STICKY NAVIGATION HEADER
+         =================================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio.</a>
+            
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-btn" id="theme-toggle">🌙</button>
+            </div>
+
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- ===================================
+         2. ANIMATED HERO SECTION
+         =================================== -->
+    <section class="hero" id="about">
+        <!-- Floating Background Shapes -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+
+        <div class="hero-content">
+            <div class="text-content">
+                <!-- Masked Reveal Animation (Sujit Reference) -->
+                <h1 class="hero-title">
+                    <span class="reveal-container">
+                        <span class="reveal-text delay-1">Hello, I'm a</span>
+                    </span>
+                    <span class="reveal-container">
+                        <span class="reveal-text delay-2" style="color: var(--primary);">Full Stack Developer</span>
+                    </span>
+                    <span class="reveal-container">
+                        <span class="reveal-text delay-3">& IoT Enthusiast</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Training at Kodnest. Passionate about bridging software with hardware (ECE) and designing intelligent solutions.
+                </p>
+
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <!-- Resume Download Button (Put resume.pdf in same folder) -->
+                    <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
+                </div>
+
+                <!-- Quick Facts Section (Client Requirement) -->
+                <div class="quick-facts">
+                    <div class="fact-item"><span class="fact-icon">🗣️</span> English/Hindi/Telugu</div>
+                    <div class="fact-item"><span class="fact-icon">🎓</span> Final Year B.Tech ECE</div>
+                    <div class="fact-item"><span class="fact-icon">📍</span> Kodnest Trainee</div>
+                </div>
+            </div>
+
+            <div class="hero-img-wrapper">
+<img src="profile.png" alt="Profile" class="hero-img">
+<div class="badge-container">
+<div class="skill-badge">Full Stack</div>
+<div class="skill-badge">IoT</div>
+<div class="skill-badge">Hardware</div>
+<div class="skill-badge">Java</div>
+</div>
+</div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         3. ACHIEVEMENTS SECTION
+         =================================== -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                
+                <!-- Achievement 1: TCS CodeVita -->
+                <div class="ach-card">
+                    <span class="ach-icon">🏆</span>
+                    <h3 class="ach-title">TCS CodeVita S13</h3>
+                    <p class="ach-desc">Successfully cleared Round 1 of the global coding contest, demonstrating strong problem-solving and DSA skills.</p>
+                </div>
+
+                <!-- Achievement 2: NPTEL Certification -->
+                <div class="ach-card">
+                    <span class="ach-icon">📜</span>
+                    <h3 class="ach-title">NPTEL Certified</h3>
+                    <p class="ach-desc">Certification in "Introduction to IoT". Proven domain knowledge in embedded systems and sensors.</p>
+                </div>
+
+                <!-- Achievement 3: Hackathon -->
+                <div class="ach-card">
+                    <span class="ach-icon">💻</span>
+                    <h3 class="ach-title">Hackathon Veteran</h3>
+                    <p class="ach-desc">Participated in a grueling 12-Hour College Level Hackathon. Collaborated to build a working prototype under pressure.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         4. INTERACTIVE GALLERY
+         =================================== -->
+    <section class="section" id="gallery" style="background: var(--bg-card);">
+        <div class="container">
+            <h2 class="section-title">Gallery & Work</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
+                Circuit Prototyping, Web Designs, and Development Work
+            </p>
+            
+            <div class="gallery-grid">
+                
+                <!-- Gallery Item 1: Circuit Design -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" 
+                         alt="Circuit Prototype" 
+                         class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>IoT Prototype</h3>
+                        <p>Hardware Integration</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Web Design -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169160?auto=format&fit=crop&w=600&q=80" 
+                         alt="Web UI Design" 
+                         class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Web UI Design</h3>
+                        <p>Full Stack Project</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Development -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" 
+                         alt="Code Development" 
+                         class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Development</h3>
+                        <p>Java/Spring Boot</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Hackathon/Team -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" 
+                         alt="Hackathon Team" 
+                         class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Hackathon Team</h3>
+                        <p>Collaboration & Innovation</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         5. CONTACT & SKILLS SECTION
+         =================================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            
+            <!-- Skills Tags -->
+            <div class="skills-container" style="margin-bottom: 2rem;">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">IoT</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">ESP32</span>
+            </div>
+            
+            <!-- Contact Buttons -->
+            <div class="contact-btn-container">
+                <a href="mailto:your-email@example.com" class="btn btn-primary" style="margin: 0.5rem;">
+                    📧 Email Me
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline" style="margin: 0.5rem;" target="_blank">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/yourprofile" class="btn btn-outline" style="margin: 0.5rem;" target="_blank">
+                    🔗 GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         6. FOOTER
+         =================================== -->
+    <footer class="footer">
+        <p>&copy; 2026 Your Portfolio. Designed & Built by You. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

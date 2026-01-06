@@ -1,0 +1,270 @@
+.admin-timetable-container {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f7fa;
+}
+
+.admin-timetable-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.filter-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.filter-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-add {
+  background: #28a745;
+  color: white;
+}
+
+.btn-lunch {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-edit {
+  background: #ffc107;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.btn-edit-lunch {
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timetable-grid {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.timetable-table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.time-cell {
+  background: #f9f9f9;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.subject-cell {
+  min-height: 100px;
+}
+
+.entry-content {
+  background: #e7f3ff;
+  padding: 8px;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.entry-content strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.entry-content p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+/* Lunch Break Styling */
+.lunch-break-row {
+  background: linear-gradient(135deg, #fff9e6 0%, #ffe699 100%);
+  border-top: 3px solid #ff9800;
+  border-bottom: 3px solid #ff9800;
+}
+
+.lunch-time {
+  background: #ff9800;
+  color: white;
+  font-weight: 700;
+}
+
+.lunch-cell {
+  background: #fffbe6 !important;
+}
+
+.lunch-content {
+  background: #fff3cd;
+  padding: 8px;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.lunch-content strong {
+  color: #ff9800;
+  font-size: 14px;
+}
+
+.empty {
+  color: #999;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-field {
+  margin-bottom: 15px;
+}
+
+.modal-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.modal-field input, .modal-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-save {
+  background: #28a745;
+  color: white;
+  flex: 1;
+}
+
+.btn-cancel {
+  background: #6c757d;
+  color: white;
+  flex: 1;
+}

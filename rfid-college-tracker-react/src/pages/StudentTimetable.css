@@ -1,0 +1,249 @@
+.timetable-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+.timetable-container h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.filter-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.filter-card h5 {
+  color: #34495e;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.filter-group select:hover:not(:disabled) {
+  border-color: #3498db;
+}
+
+.filter-group select:disabled {
+  background-color: #ecf0f1;
+  cursor: not-allowed;
+  color: #95a5a6;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-view,
+.btn-reset {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-view {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-view:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-reset {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #7f8c8d;
+}
+
+.error-message {
+  background-color: #ffe5e5;
+  color: #c0392b;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 15px;
+  border-left: 4px solid #e74c3c;
+}
+
+.info-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  border-left: 4px solid #28a745;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #3498db;
+  font-weight: 600;
+}
+
+.timetable-wrapper {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.timetable-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 80px;
+}
+
+.timetable-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.time-slot {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  color: #333;
+  width: 120px;
+}
+
+.subject-cell {
+  min-width: 150px;
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subject-info strong {
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.subject-info small {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.no-class {
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-view,
+  .btn-reset {
+    width: 100%;
+  }
+
+  .timetable-table {
+    font-size: 12px;
+  }
+
+  .timetable-table th,
+  .timetable-table td {
+    padding: 8px;
+  }
+}
+/* --- Add these styles for Admin Actions --- */
+
+.admin-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.btn-edit, .btn-delete {
+  padding: 2px 8px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background-color: #3498db; /* Blue */
+  border-color: #3498db;
+}
+
+.btn-delete {
+  background-color: #e74c3c; /* Red */
+  border-color: #e74c3c;
+}
