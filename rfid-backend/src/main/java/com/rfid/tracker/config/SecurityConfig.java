@@ -37,6 +37,8 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
+
 
 /**
 
@@ -97,7 +99,7 @@ public class SecurityConfig {
         authBuilder.userDetailsService(myUserDetailsService).passwordEncoder(passwordEncoder());
 
         return authBuilder.build();
-
+        
     }
 
     @Bean
@@ -135,6 +137,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/login").permitAll()
 
                 .requestMatchers("/login").permitAll()
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
                 // ✅ PUBLIC ENDPOINTS
 
@@ -224,23 +227,19 @@ public class SecurityConfig {
      */
 
     @Bean
-
     public CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
         // ✅ Allow React frontend
 
-        configuration.setAllowedOrigins(Arrays.asList(
-
-            "http://localhost:5173",
-
-            "http://127.0.0.1:5173",
-
-            "http://localhost:3000"
-
-        ));
-
+        configuration.setAllowedOriginPatterns(List.of(
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "https://*.vercel.app",
+        "https://*.ngrok-free.dev"
+    ));
         // ✅ Allow all HTTP methods
 
         configuration.setAllowedMethods(Arrays.asList(

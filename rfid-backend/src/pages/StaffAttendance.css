@@ -1,0 +1,243 @@
+.staff-attendance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.filter-select:hover {
+  border-color: #f5576c;
+  box-shadow: 0 2px 8px rgba(245, 87, 108, 0.2);
+}
+
+.month-grid {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.month-grid h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.month-card {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.month-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.25);
+  border-color: #f5576c;
+  background: #fff6f7;
+}
+
+.month-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.month-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.attendance-grid-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid-header h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.export-button,
+.back-month-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.export-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.export-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+}
+
+.back-month-button {
+  background: #e9ecef;
+  color: #333;
+}
+
+.back-month-button:hover {
+  background: #dee2e6;
+}
+
+.attendance-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.attendance-table thead {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.attendance-table th {
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.attendance-table td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table tbody tr:hover {
+  background: #fff6f7;
+}
+
+.staff-name {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.status-cell {
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 6px 8px !important;
+  font-size: 12px;
+}
+
+.status-cell.present {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-cell.late {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-cell.absent {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.count-cell {
+  font-weight: 600;
+  color: #f5576c;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .months-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .attendance-table {
+    font-size: 11px;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 8px 4px;
+  }
+}
