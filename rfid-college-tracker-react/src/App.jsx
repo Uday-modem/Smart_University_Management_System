@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { ThemeProvider } from "./context/themeContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignupPage';
 import StudentDashboard from './pages/StudentDashboard';
